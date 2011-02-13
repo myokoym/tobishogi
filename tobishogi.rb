@@ -14,12 +14,14 @@ class TobiShogi
       if v == "1"
         if status[i - 3] == 1
           status[i], status[i - 6] = status[i - 6], status[i]
+          break
         elsif status[i - 3] == 0
           status[i], status[i - 3] = status[i - 3], status[i]
+          break
         end
       end
     end
-    status.join
+    status
   end
 end
 
