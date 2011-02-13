@@ -12,10 +12,10 @@ class TobiShogi
   def move(status)
     status.split(//).each_with_index_reverse do |v, i|
       if v == "1"
-        if status[i - 3] == 1
+        if status[i - 3] == "1"
           status[i], status[i - 6] = status[i - 6], status[i]
           break
-        elsif status[i - 3] == 0
+        elsif status[i - 3] == "0"
           status[i], status[i - 3] = status[i - 3], status[i]
           break
         end
