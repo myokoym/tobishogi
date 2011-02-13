@@ -10,7 +10,6 @@ class TobiShogi
   end
 
   def move(status)
-    "222001110"
     status.split(//).each_with_index_reverse do |v, i|
       if v == "1"
         if status[i - 3] == 1
@@ -20,6 +19,7 @@ class TobiShogi
         end
       end
     end
+    status.join
   end
 end
 
