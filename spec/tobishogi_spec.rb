@@ -13,7 +13,10 @@ describe TobiShogi do
   it "飛び越せないときは手前の駒を進める" do
     subject.move("212001120").should == "212101020"
   end
-  it "手前の駒がないときは二段目の駒を進める"
+  it "手前の駒がないときは二段目の駒を進める" do
+    subject.move("012101220").should == "112001220"
+  end
+    
   it "何も動かせないときはそのまま"
 end
 
