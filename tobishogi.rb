@@ -1,14 +1,14 @@
-class TobiShogi
-  class Array
-    def each_with_index_reverse
-      count = self.size - 1
-      self.reverse.each do |item|
-        yield item, count
-        count -= 1
-      end
+class Array
+  def each_with_index_reverse
+    count = self.size - 1
+    self.reverse.each do |item|
+      yield item, count
+      count -= 1
     end
   end
+end
 
+class TobiShogi
   def move(status)
     status.split(//).each_with_index_reverse do |v, i|
       if v == "1"
